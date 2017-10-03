@@ -1,7 +1,6 @@
 class Model {
-	constructor(name, attributes, events) {
+	constructor(name, events) {
 		this.name = name;
-		this.attributes = attributes;
 		this.events = events ? events : {};
 		this.handlers = {};
 	}

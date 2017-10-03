@@ -20,16 +20,7 @@ class Model {
 		}
 
 		return this.all(stream).reduce((events, event) => {
-
-			for (var i = 0; i < this.attributes.length; i++) {
-				const attribute = this.attributes[i];
-
-				if (event.payload[attribute]) {
-					events[attribute] = event.payload[attribute];
-				}
-			}
-
-			return events;
+			return Object.assign(events, event.payload);
 		}, {});
 	}
 

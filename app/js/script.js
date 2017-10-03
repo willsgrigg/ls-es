@@ -1,6 +1,6 @@
 const customers = localStorage.getItem('customers') ? JSON.parse(localStorage.getItem('customers')) : {};
 
-let Customers = new Model('customers', ['firstName', 'lastName'], customers);
+let Customers = new Model('customers', customers);
 
 bindEventListeners();
 
